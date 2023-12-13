@@ -1,4 +1,4 @@
-package com.study.kotlkotlin.domain.auth.presentation.dto.response
+package com.example.kotlinpractice.domain.auth.dto.response
 
 import java.time.LocalDateTime
 

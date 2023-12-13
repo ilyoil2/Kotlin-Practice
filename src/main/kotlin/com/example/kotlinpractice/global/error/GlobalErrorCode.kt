@@ -1,6 +1,6 @@
-package com.study.kotlkotlin.global.error
+package com.example.kotlinpractice.global.error
 
-import com.study.kotlkotlin.global.error.exception.ErrorProperty
+import com.example.kotlinpractice.global.error.exception.ErrorProperty
 import org.springframework.http.HttpStatus
 
 enum class GlobalErrorCode(

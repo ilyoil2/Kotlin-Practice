@@ -1,9 +1,9 @@
-package com.study.kotlkotlin.global.error
+package com.example.kotlinpractice.global.error
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.study.kotlkotlin.global.error.dto.ErrorResponse
-import com.study.kotlkotlin.global.error.exception.BusinessException
-import com.study.kotlkotlin.global.error.exception.ErrorProperty
+import com.example.kotlinpractice.global.error.dto.ErrorResponse
+import com.example.kotlinpractice.global.error.exception.BusinessException
+import com.example.kotlinpractice.global.error.exception.ErrorProperty
 import org.springframework.web.filter.OncePerRequestFilter
 import javax.servlet.FilterChain
 import javax.servlet.http.HttpServletRequest

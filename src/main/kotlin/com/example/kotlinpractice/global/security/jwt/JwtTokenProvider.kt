@@ -3,7 +3,7 @@ package com.example.kotlinpractice.global.security.jwt
 import com.example.kotlinpractice.global.security.auth.AuthDetailsService
 import com.example.kotlinpractice.domain.auth.domain.repository.RefreshTokenRepository
 import com.example.kotlinpractice.domain.auth.domain.RefreshToken
-import com.study.kotlkotlin.domain.auth.presentation.dto.response.TokenResponse
+import com.example.kotlinpractice.domain.auth.dto.response.TokenResponse
 import com.study.kotlkotlin.global.security.exception.ExpiredTokenException
 import com.study.kotlkotlin.global.security.exception.InvalidTokenException
 import io.jsonwebtoken.*

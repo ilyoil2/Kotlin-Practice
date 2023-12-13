@@ -1,7 +1,7 @@
 package com.example.kotlinpractice.global.security
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.study.kotlkotlin.global.error.GlobalExceptionFilter
+import com.example.kotlinpractice.global.error.GlobalExceptionFilter
 import com.study.kotlkotlin.global.security.jwt.JwtFilter
 import com.example.kotlinpractice.global.security.jwt.JwtTokenProvider
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter

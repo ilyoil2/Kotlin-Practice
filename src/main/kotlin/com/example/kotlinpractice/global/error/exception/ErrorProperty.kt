@@ -1,4 +1,4 @@
-package com.study.kotlkotlin.global.error.exception
+package com.example.kotlinpractice.global.error.exception
 
 interface ErrorProperty {
     fun status(): Int

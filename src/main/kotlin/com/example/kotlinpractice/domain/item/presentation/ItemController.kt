@@ -1,9 +1,9 @@
-package com.example.kotlinpractice.domain.feed.presentation
+package com.example.kotlinpractice.domain.item.presentation
 
-import com.example.kotlinpractice.domain.feed.presentation.dto.request.CreateItemRequest
-import com.example.kotlinpractice.domain.feed.presentation.dto.response.GetItemResponse
-import com.example.kotlinpractice.domain.feed.service.CreateItemService
-import com.example.kotlinpractice.domain.feed.service.GetItemService
+import com.example.kotlinpractice.domain.item.presentation.dto.request.CreateItemRequest
+import com.example.kotlinpractice.domain.item.presentation.dto.response.GetItemResponse
+import com.example.kotlinpractice.domain.item.service.CreateItemService
+import com.example.kotlinpractice.domain.item.service.GetItemService
 import org.springframework.web.bind.annotation.*
 
 @RequestMapping("/item")
@@ -18,7 +18,7 @@ class ItemController (
     }
 
     @GetMapping
-    fun getItemList() :  GetItemResponse {
+    fun getItemList() : GetItemResponse {
         return getItemService.execute()
     }
 

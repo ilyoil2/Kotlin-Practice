@@ -1,4 +1,4 @@
-package com.example.kotlinpractice.domain.feed.presentation.dto.response
+package com.example.kotlinpractice.domain.item.presentation.dto.response
 
 import javax.validation.constraints.NotNull
 

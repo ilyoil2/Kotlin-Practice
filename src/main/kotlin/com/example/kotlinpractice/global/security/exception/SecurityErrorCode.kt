@@ -1,6 +1,6 @@
-package com.study.kotlkotlin.global.security.exception
+package com.example.kotlinpractice.global.security.exception
 
-import com.study.kotlkotlin.global.error.exception.ErrorProperty
+import com.example.kotlinpractice.global.error.exception.ErrorProperty
 
 enum class SecurityErrorCode  (
     private val status: Int,

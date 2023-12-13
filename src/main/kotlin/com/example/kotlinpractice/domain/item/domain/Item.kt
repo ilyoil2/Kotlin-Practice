@@ -1,4 +1,4 @@
-package com.example.kotlinpractice.domain.feed.domain
+package com.example.kotlinpractice.domain.item.domain
 
 import com.example.kotlinpractice.global.entity.BaseEntity
 import com.sun.istack.NotNull

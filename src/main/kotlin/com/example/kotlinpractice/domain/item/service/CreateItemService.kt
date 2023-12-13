@@ -1,9 +1,9 @@
-package com.example.kotlinpractice.domain.feed.service
+package com.example.kotlinpractice.domain.item.service
 
-import com.example.kotlinpractice.domain.feed.domain.Item
-import com.example.kotlinpractice.domain.feed.domain.repository.ItemRepository
-import com.example.kotlinpractice.domain.feed.exception.ItemAlreadyExistsException
-import com.example.kotlinpractice.domain.feed.presentation.dto.request.CreateItemRequest
+import com.example.kotlinpractice.domain.item.exception.ItemAlreadyExistsException
+import com.example.kotlinpractice.domain.item.domain.Item
+import com.example.kotlinpractice.domain.item.domain.repository.ItemRepository
+import com.example.kotlinpractice.domain.item.presentation.dto.request.CreateItemRequest
 import org.springframework.stereotype.Service
 import javax.transaction.Transactional
 

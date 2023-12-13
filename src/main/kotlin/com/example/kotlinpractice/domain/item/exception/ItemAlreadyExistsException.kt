@@ -1,7 +1,7 @@
-package com.example.kotlinpractice.domain.feed.exception
+package com.example.kotlinpractice.domain.item.exception
 
 import com.example.kotlinpractice.global.error.ErrorCode
-import com.study.kotlkotlin.global.error.exception.BusinessException
+import com.example.kotlinpractice.global.error.exception.BusinessException
 
 object ItemAlreadyExistsException : BusinessException(
         ErrorCode.ITEM_ALREADY_EXISTS

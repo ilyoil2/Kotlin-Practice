@@ -1,7 +1,7 @@
-package com.study.kotlkotlin.global.error.dto
+package com.example.kotlinpractice.global.error.dto
 
-import com.study.kotlkotlin.global.error.GlobalErrorCode
-import com.study.kotlkotlin.global.error.exception.ErrorProperty
+import com.example.kotlinpractice.global.error.GlobalErrorCode
+import com.example.kotlinpractice.global.error.exception.ErrorProperty
 import org.springframework.dao.DataIntegrityViolationException
 import org.springframework.validation.BindingResult
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException

@@ -1,4 +1,4 @@
-package com.study.kotlkotlin.global.error.exception
+package com.example.kotlinpractice.global.error.exception
 
 import com.example.kotlinpractice.global.error.ErrorCode
 

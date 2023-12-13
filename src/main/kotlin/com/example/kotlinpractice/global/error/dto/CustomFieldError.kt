@@ -1,4 +1,4 @@
-package com.study.kotlkotlin.global.error.dto
+package com.example.kotlinpractice.global.error.dto
 
 import org.springframework.validation.BindingResult
 
