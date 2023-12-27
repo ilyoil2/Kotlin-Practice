@@ -2,12 +2,13 @@ package com.example.kotlinpractice.domain.user.domain
 
 import com.example.kotlinpractice.global.entity.BaseEntity
 import com.sun.istack.NotNull
+import java.util.UUID
 import javax.persistence.Column
 import javax.persistence.Entity
 
 @Entity
 class User(
-        id : Long?,
+        id : UUID,
 
         @field:NotNull
         @Column(columnDefinition = "VARCHAR(10)")

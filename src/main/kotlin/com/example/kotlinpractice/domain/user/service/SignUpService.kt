@@ -5,6 +5,7 @@ import com.example.kotlinpractice.domain.user.domain.repository.UserRepository
 import com.example.kotlinpractice.domain.user.exception.UserAlreadyExistsException
 import com.example.kotlinpractice.domain.user.presentation.request.SignUpRequest
 import org.springframework.stereotype.Service
+import java.util.*
 import javax.transaction.Transactional
 
 @Service
@@ -21,10 +22,10 @@ class SignUpService (
 
         userRepository.save(
                 User(
+                        id = UUID.randomUUID(),
                         accountId = request.accountId,
                         password = request.password,
-                        email = request.email,
-                        id = null,
+                        email = request.email
                 )
         )
     }
