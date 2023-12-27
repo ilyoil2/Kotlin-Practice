@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*
 @RestController
 class ItemController(
         private val createItemService: CreateItemService,
-        private val queryItemService: GetItemService
+        private val queryItemListService: QueryItemListService,
 ) {
     @PostMapping
     fun createItem(@RequestBody request: CreateItemRequest) {
@@ -19,10 +19,12 @@ class ItemController(
 
     @GetMapping
     fun queryItemList(): ItemResponse {
-        return queryItemService.execute()
+        return queryItemListService.execute()
     }
 
-    @DeleteMapping("/item-id")
-    fun deleteItem(@PathVariable("item-id") Long)
+    @GetMapping("/{item-id}")
+    fun queryItem(@PathVariable("item-id") @NotNull itemId: UUID): ItemResponse {
+        return queryItemService.execute(itemId)
+    }
 
 }
