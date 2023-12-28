@@ -29,12 +29,12 @@ class ItemController(
     }
 
     @GetMapping("/{item-id}")
-    fun queryItem(@PathVariable("item-id") @NotNull itemId: UUID): ItemResponse {
+    fun queryItem(@PathVariable("item-id") @NotNull itemId: Long): QueryItemListResponse {
         return queryItemService.execute(itemId)
     }
 
     @DeleteMapping("/{item-id}")
-    fun deleteItem(@PathVariable("item-id") itemId : UUID) {
+    fun deleteItem(@PathVariable("item-id") itemId : Long) {
         deleteItemService.execute(itemId)
     }
 

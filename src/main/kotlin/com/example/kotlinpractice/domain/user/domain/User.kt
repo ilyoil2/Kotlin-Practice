@@ -8,7 +8,7 @@ import javax.persistence.Entity
 
 @Entity
 class User(
-        id : UUID,
+        id : Long,
 
         @field:NotNull
         @Column(columnDefinition = "VARCHAR(10)")

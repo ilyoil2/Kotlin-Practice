@@ -21,7 +21,7 @@ class CreateItemService (
 
         itemRepository.save(
                 Item(
-                        id = UUID.randomUUID(),
+                        id = 0,
                         itemName = request.itemName,
                         itemCounts = request.itemCounts
                 )

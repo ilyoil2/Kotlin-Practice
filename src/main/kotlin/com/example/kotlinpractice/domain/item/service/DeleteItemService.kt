@@ -15,7 +15,7 @@ class DeleteItemService(
         private val userFacade: UserFacade
 ) {
     @Transactional
-    fun execute(itemId : UUID) {
+    fun execute(itemId : Long) {
         val user: User = userFacade.getCurrentUser()
 
         val item: Item = itemRepository.findById(itemId)

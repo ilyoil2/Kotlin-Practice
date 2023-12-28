@@ -9,7 +9,7 @@ import javax.persistence.Entity
 @Entity
 class Item (
 
-        id : UUID,
+        override val id : Long,
 
         @field:NotNull
         @Column(columnDefinition = "VARCHAR(50)")

@@ -7,5 +7,5 @@ import javax.persistence.*
 abstract class BaseEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: UUID?
+    open val id: Long = 0
 )

@@ -12,5 +12,5 @@ interface ItemRepository : JpaRepository<Item, Long> {
 
     fun deleteById(id: UUID?)
 
-    fun findById(id: UUID) : Item
+    fun findItemById(id: Long) : Item
 }

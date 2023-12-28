@@ -22,7 +22,7 @@ class SignUpService (
 
         userRepository.save(
                 User(
-                        id = UUID.randomUUID(),
+                        id = 0,
                         accountId = request.accountId,
                         password = request.password,
                         email = request.email
