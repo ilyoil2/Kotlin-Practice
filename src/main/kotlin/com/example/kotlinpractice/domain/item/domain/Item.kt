@@ -17,7 +17,15 @@ class Item (
 
         @field:NotNull
         @Column(columnDefinition = "INT")
-        var itemCounts: Long,
+        var itemCounts: Int,
 
-        ) : BaseEntity(id)
+        ) : BaseEntity() {
+        fun minusItemCount(int: Int) {
+                this.itemCounts -= int
+        }
 
+        fun addItemCount(int: Int) {
+                this.itemCounts += int
+        }
+
+}

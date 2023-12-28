@@ -1,7 +1,7 @@
 package com.example.kotlinpractice.domain.item.presentation
 
 import com.example.kotlinpractice.domain.item.presentation.dto.request.CreateItemRequest
-import com.example.kotlinpractice.domain.item.presentation.dto.response.ItemResponse
+import com.example.kotlinpractice.domain.item.presentation.dto.response.QueryItemListResponse
 import com.example.kotlinpractice.domain.item.service.CreateItemService
 import com.example.kotlinpractice.domain.item.service.DeleteItemService
 import com.example.kotlinpractice.domain.item.service.QueryItemListService
@@ -24,7 +24,7 @@ class ItemController(
     }
 
     @GetMapping
-    fun queryItemList(): ItemResponse {
+    fun queryItemList(): QueryItemListResponse {
         return queryItemListService.execute()
     }
 

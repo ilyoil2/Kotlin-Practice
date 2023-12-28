@@ -17,10 +17,7 @@ class QueryItemService (
     fun execute(itemId : Long) : QueryItemResponse {
         val item: Item = itemRepository.findItemById(itemId)
 
-        return ItemResponse(
-                itemName = item.itemName,
-                itemCounts = item.itemCounts
-        )
+        return QueryItemResponse(item)
     }
 
 }
