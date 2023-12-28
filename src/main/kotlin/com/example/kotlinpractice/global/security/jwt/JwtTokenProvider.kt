@@ -4,7 +4,7 @@ import com.example.kotlinpractice.global.security.auth.AuthDetailsService
 import com.example.kotlinpractice.domain.auth.domain.repository.RefreshTokenRepository
 import com.example.kotlinpractice.domain.auth.domain.RefreshToken
 import com.example.kotlinpractice.domain.auth.dto.response.TokenResponse
-import com.study.kotlkotlin.global.security.exception.ExpiredTokenException
+import com.example.kotlinpractice.global.security.exception.ExpiredTokenException
 import com.study.kotlkotlin.global.security.exception.InvalidTokenException
 import io.jsonwebtoken.*
 import io.jsonwebtoken.security.Keys

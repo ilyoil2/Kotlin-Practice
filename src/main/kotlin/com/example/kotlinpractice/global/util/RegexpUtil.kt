@@ -1,4 +1,4 @@
-package com.study.kotlkotlin.global.util
+package com.example.kotlinpractice.global.util
 
 object RegexpUtil {
 

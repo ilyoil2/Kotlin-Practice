@@ -1,4 +1,4 @@
-package com.study.kotlkotlin.global.security.auth
+package com.example.kotlinpractice.global.security.auth
 
 import com.example.kotlinpractice.domain.user.domain.User
 import org.springframework.security.core.GrantedAuthority

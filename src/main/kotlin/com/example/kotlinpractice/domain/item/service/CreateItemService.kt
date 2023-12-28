@@ -5,7 +5,6 @@ import com.example.kotlinpractice.domain.item.domain.Item
 import com.example.kotlinpractice.domain.item.domain.repository.ItemRepository
 import com.example.kotlinpractice.domain.item.presentation.dto.request.CreateItemRequest
 import org.springframework.stereotype.Service
-import java.util.*
 import javax.transaction.Transactional
 
 @Service
