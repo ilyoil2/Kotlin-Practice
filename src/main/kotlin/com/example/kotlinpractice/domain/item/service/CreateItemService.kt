@@ -23,8 +23,9 @@ class CreateItemService (
                 Item(
                         id = 0,
                         itemName = request.itemName,
-                        itemCounts = request.itemCounts
+                        itemCounts = 0
                 )
         )
     }
+
 }
