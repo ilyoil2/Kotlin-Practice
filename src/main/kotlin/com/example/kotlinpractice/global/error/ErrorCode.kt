@@ -1,10 +1,12 @@
 package com.example.kotlinpractice.global.error
 
+import com.example.kotlinpractice.global.error.exception.ErrorProperty
+
 
 enum class ErrorCode (
-    val status: Int,
-    val message: String
-){
+    private val status: Int,
+    private val message: String
+) : ErrorProperty {
     INTERNAL_SERVER_ERROR(500, "Internal Server Error"),
 
     INVALID_TOKEN(401,"Invalid Token"),
@@ -23,5 +25,6 @@ enum class ErrorCode (
 
     REFRESH_TOKEN_NOT_FOUND(404, "Refresh Token Not Found");
 
-
+    override fun message(): String = message
+    override fun status(): Int = status
 }
