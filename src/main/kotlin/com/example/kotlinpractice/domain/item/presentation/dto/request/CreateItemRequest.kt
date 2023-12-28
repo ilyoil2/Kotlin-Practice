@@ -9,7 +9,4 @@ data class CreateItemRequest(
         @field:Size(max = 20)
         val itemName: String,
 
-        @field:NotBlank
-        @field:Size(max = 40)
-        val email: String
 )
