@@ -2,6 +2,7 @@ package com.example.kotlinpractice.domain.order.presentation
 
 import com.example.kotlinpractice.domain.order.service.CancelOrderService
 import com.example.kotlinpractice.domain.order.service.MakeOrderService
+import com.example.kotlinpractice.domain.order.service.QueryMyOrderService
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -16,7 +17,7 @@ import javax.validation.constraints.NotBlank
 class OrderController (
         private val makeOrderService: MakeOrderService,
         private val cancelOrderService: CancelOrderService,
-        private val q
+        private val queryMyOrderService: QueryMyOrderService
 ) {
 
     @PostMapping("/{item-id}")
@@ -32,7 +33,7 @@ class OrderController (
 
     @GetMapping
     fun queryMyOrder() {
-
+        queryMyOrderService.execute()
     }
 
 }
