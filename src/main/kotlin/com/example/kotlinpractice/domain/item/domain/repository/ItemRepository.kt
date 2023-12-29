@@ -8,9 +8,7 @@ interface ItemRepository : JpaRepository<Item, Long> {
 
     fun existsByItemName(itemName: String) : Boolean
 
-    fun deleteItemById(id: UUID)
-
-    fun deleteById(id: UUID?)
+    fun deleteItemById(id: Long)
 
     fun findItemById(id: Long) : Item
 }
