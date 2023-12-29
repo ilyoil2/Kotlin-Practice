@@ -1,12 +1,10 @@
 package com.example.kotlinpractice.domain.item.presentation
 
 import com.example.kotlinpractice.domain.item.presentation.dto.request.CreateItemRequest
+import com.example.kotlinpractice.domain.item.presentation.dto.request.ModifyItemCountRequest
 import com.example.kotlinpractice.domain.item.presentation.dto.response.QueryItemListResponse
 import com.example.kotlinpractice.domain.item.presentation.dto.response.QueryItemResponse
-import com.example.kotlinpractice.domain.item.service.CreateItemService
-import com.example.kotlinpractice.domain.item.service.DeleteItemService
-import com.example.kotlinpractice.domain.item.service.QueryItemListService
-import com.example.kotlinpractice.domain.item.service.QueryItemService
+import com.example.kotlinpractice.domain.item.service.*
 import org.springframework.web.bind.annotation.*
 import javax.validation.constraints.NotNull
 
@@ -16,7 +14,8 @@ class ItemController(
         private val createItemService: CreateItemService,
         private val queryItemListService: QueryItemListService,
         private val deleteItemService: DeleteItemService,
-        private val queryItemService: QueryItemService
+        private val queryItemService: QueryItemService,
+        private val modifyItemCountService: ModifyItemCountService
 ) {
     @PostMapping
     fun createItem(@RequestBody request: CreateItemRequest) {
@@ -36,6 +35,11 @@ class ItemController(
     @DeleteMapping("/{item-id}")
     fun deleteItem(@PathVariable("item-id") itemId : Long) {
         deleteItemService.execute(itemId)
+    }
+
+    @PostMapping("/itemCount/{item-id}")
+    fun modifyItemCount(@PathVariable("item-id") itemId: Long, @RequestBody request: ModifyItemCountRequest) {
+        modifyItemCountService.execute(itemId, request)
     }
 
 }
