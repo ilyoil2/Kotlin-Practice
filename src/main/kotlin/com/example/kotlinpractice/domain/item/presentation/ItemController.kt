@@ -8,7 +8,6 @@ import com.example.kotlinpractice.domain.item.service.DeleteItemService
 import com.example.kotlinpractice.domain.item.service.QueryItemListService
 import com.example.kotlinpractice.domain.item.service.QueryItemService
 import org.springframework.web.bind.annotation.*
-import java.util.UUID
 import javax.validation.constraints.NotNull
 
 @RequestMapping("/item")

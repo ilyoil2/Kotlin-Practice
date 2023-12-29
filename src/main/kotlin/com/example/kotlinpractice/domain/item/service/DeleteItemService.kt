@@ -16,7 +16,7 @@ class DeleteItemService(
 
         val item: Item = itemRepository.findItemById(itemId)
 
-        itemRepository.delete(item)
+        itemRepository.deleteItemById(item.id)
     }
 
 }
