@@ -23,7 +23,7 @@ class CancelOrderService (
 
         val order: Order = orderRepository.findOrderById(orderId)
 
-        if(order.type == OrderType.COMPELETE) {
+        if(order.type == OrderType.COMPLETE) {
             throw UserAlreadyExistsException
         }
 
