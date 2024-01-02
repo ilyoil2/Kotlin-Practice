@@ -13,7 +13,7 @@ class Storage(
         @JoinColumn(name = "user_id", columnDefinition = "BINARY(16)")
         val user: User,
 
-        @OneToMany(mappedBy = "storage", fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
+        @OneToMany(mappedBy = "storage", fetch = FetchType.LAZY)
         val itemList: MutableList<Item> = mutableListOf()
 
 ) : BaseEntity(id) {
