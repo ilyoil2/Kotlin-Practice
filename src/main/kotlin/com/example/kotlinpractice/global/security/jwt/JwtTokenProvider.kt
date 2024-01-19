@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest
 @Component
 class JwtTokenProvider(
         private val jwtProperties: JwtProperties,
-        private val pository: pository,
+        private val refreshTokenRepository: RefreshTokenRepository,
         private val authDetailsService: AuthDetailsService
 ) {
 
@@ -37,7 +37,7 @@ class JwtTokenProvider(
 
     fun createRefreshToken(accountId: String): String {
         val token = createToken(accountId, "refresh", jwtProperties.refreshExp)
-        pository.save(
+        refreshTokenRepository.save(
             RefreshToken(
                 username = accountId,
                 token = token,
