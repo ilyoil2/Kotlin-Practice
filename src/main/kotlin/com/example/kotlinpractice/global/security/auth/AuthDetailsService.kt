@@ -6,14 +6,15 @@ import com.example.kotlinpractice.domain.user.exception.UserNotFoundException
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.stereotype.Service
+import java.util.UUID
 
 @Service
 class AuthDetailsService(
     private val userRepository: UserRepository
 ): UserDetailsService {
 
-    override fun loadUserByUsername(accountId: String): UserDetails {
-        val user: User = userRepository.findByAccountId(accountId) ?: throw UserNotFoundException
+    override fun loadUserByUsername(email: String): UserDetails {
+        val user: User = userRepository.findByEmail(email) ?: throw UserNotFoundException
         return AuthDetails(user)
     }
 

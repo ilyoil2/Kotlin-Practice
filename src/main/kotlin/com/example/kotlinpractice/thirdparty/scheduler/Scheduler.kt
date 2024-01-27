@@ -1,4 +1,4 @@
-package com.example.kotlinpractice.thirdparty
+package com.example.kotlinpractice.thirdparty.scheduler
 
 import org.springframework.stereotype.Component
 

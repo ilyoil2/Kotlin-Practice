@@ -23,23 +23,23 @@ class JwtTokenProvider(
         private val authDetailsService: AuthDetailsService
 ) {
 
-    fun generateTokens(accountId: String): TokenResponse {
+    fun generateTokens(id: UUID): TokenResponse {
         return TokenResponse(
-            accessToken = createAccessToken(accountId),
+            accessToken = createAccessToken(id),
             accessTokenExp = LocalDateTime.now().plusSeconds(jwtProperties.accessExp),
-            refreshToken = createRefreshToken(accountId)
+            refreshToken = createRefreshToken(id)
         )
     }
 
-    fun createAccessToken(accountId: String): String {
-        return createToken(accountId, "access", jwtProperties.accessExp)
+    fun createAccessToken(id: UUID): String {
+        return createToken(id, "access", jwtProperties.accessExp)
     }
 
-    fun createRefreshToken(accountId: String): String {
-        val token = createToken(accountId, "refresh", jwtProperties.refreshExp)
+    fun createRefreshToken(id: UUID): String {
+        val token = createToken(id, "refresh", jwtProperties.refreshExp)
         refreshTokenRepository.save(
             RefreshToken(
-                username = accountId,
+                id = id,
                 token = token,
                 expiration = jwtProperties.refreshExp * 1000
             )
@@ -47,12 +47,12 @@ class JwtTokenProvider(
         return token
     }
 
-    private fun createToken(username: String, jwtType: String, exp: Long): String {
+    private fun createToken(id: UUID, jwtType: String, exp: Long): String {
         return Jwts.builder()
             .signWith(Keys.hmacShaKeyFor(jwtProperties.secretKey.toByteArray()), SignatureAlgorithm.HS256)
-            .setSubject(username)
+            .setSubject(id.toString())
             .setHeaderParam(Header.JWT_TYPE, jwtType)
-            .setId(username)
+            .setId(id.toString())
             .setExpiration(Date(System.currentTimeMillis() + exp * 1000))
             .setIssuedAt(Date())
             .compact()

@@ -7,11 +7,8 @@ data class SignUpRequest(
 
         @field:NotBlank
         @field:Size(max = 10)
-        val accountId: String,
+        val username: String,
 
-        @field:NotBlank
-        @field:Size(max = 25)
-        val password: String,
 
         @field:NotBlank
         @field:Size(max = 40)
