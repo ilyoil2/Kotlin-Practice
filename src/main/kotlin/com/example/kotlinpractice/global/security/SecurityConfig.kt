@@ -2,7 +2,6 @@ package com.example.kotlinpractice.global.security
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.example.kotlinpractice.global.security.jwt.JwtTokenProvider
-import com.example.kotlinpractice.thirdparty.oauth.CustomOAuth2UserService
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
@@ -17,7 +16,6 @@ import org.springframework.security.web.SecurityFilterChain
 class SecurityConfig(
         private val jwtTokenProvider: JwtTokenProvider,
         private val objectMapper: ObjectMapper,
-        private val customOAuth2UserService: CustomOAuth2UserService
 ) {
 
     @Bean
@@ -38,10 +36,6 @@ class SecurityConfig(
 
         http.logout()
             .logoutSuccessUrl("/")
-
-        http.oauth2Login()
-            .userInfoEndpoint()
-            .userService(customOAuth2UserService)
 
         return http.build()
     }
